@@ -1,6 +1,6 @@
 {
   "name": "template-cli-ma",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Quickly build the scaffolding for the foundation layout",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "author": "malunan",
   "license": "ISC",
   "bin": {
-    "create-cli-ma": "index.js"
+    "template-ma": "index.js"
   },
   "dependencies": {
     "chalk": "^4.1.0",
@@ -17,6 +17,7 @@
     "download-git-repo": "^3.0.2",
     "inquirer": "^7.3.3",
     "log-symbols": "^4.0.0",
+    "node-notifier": "^9.0.0",
     "ora": "^5.1.0",
     "shelljs": "^0.8.4"
   }
