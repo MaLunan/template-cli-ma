@@ -101,18 +101,19 @@ const initAction = async (name, option) => {
     ]);
     if (!confirm.isConfirm) return false;
     //根据用户配置调整文件
-   let jsonData= fs.readFileSync((`${name}`, 'package.json'),function(err,data){
+   let jsonData= fs.readFileSync((path.join(__dirname,'./'), 'malunan/package.json'),function(err,data){
+       console.log(err)
     })
     jsonData=JSON.parse(jsonData)
     for(item in answers){
         jsonData[item]=answers[item]
     }
+    console.log(jsonData)
+    console.log(path.join(__dirname,`${name}/`))
     let obj=JSON.stringify(jsonData,null,'\t')
-    fs.writeFileSync(path.join(`${name}`, 'package.json'),obj,function(err,data){
+    let sss=fs.writeFileSync((path.join(__dirname,'./'), 'malunan/package.json'),obj,function(err,data){
         console.log(err,data)
     })
-
-
     //自动安装依赖
     const installSpinner = ora('正在安装依赖...').start();
     if (shell.exec('npm install').code !== 0) {
