@@ -1,6 +1,6 @@
 {
   "name": "template-cli-ma",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Quickly build the scaffolding for the foundation layout",
   "main": "index.js",
   "scripts": {
